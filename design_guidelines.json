@@ -1,0 +1,153 @@
+{
+  "theme": {
+    "archetype": "Modern Clean ISP SaaS & Interactive Map",
+    "primary_color_strategy": "Tenant-customizable CSS variable driven (--primary: 265 85% 58% as default vibrant royal purple)",
+    "color_tokens": {
+      "light": {
+        "background": "#F8FAFC",
+        "surface": "#FFFFFF",
+        "surface_subtle": "#F1F5F9",
+        "foreground": "#0F172A",
+        "muted_foreground": "#64748B",
+        "primary_default": "#6D28D9",
+        "primary_hover": "#5B21B6",
+        "primary_subtle": "#EDE9FE",
+        "accent_emerald": "#10B981",
+        "accent_emerald_subtle": "#ECFDF5",
+        "accent_amber": "#F59E0B",
+        "accent_amber_subtle": "#FEF3C7",
+        "accent_rose": "#F43F5E",
+        "accent_rose_subtle": "#FFF1F2",
+        "border": "#E2E8F0"
+      },
+      "dark": {
+        "background": "#0B0F19",
+        "surface": "#111827",
+        "surface_subtle": "#1F2937",
+        "foreground": "#F8FAFC",
+        "muted_foreground": "#94A3B8",
+        "primary_default": "#8B5CF6",
+        "border": "#1E293B"
+      }
+    },
+    "forbidden_colors": ["#7351B7", "#1B93A4"]
+  },
+  "typography": {
+    "font_family_headings": "Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif",
+    "font_family_body": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+    "hierarchy": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+      "h3_card": "text-xl sm:text-2xl font-semibold tracking-tight",
+      "h4_widget": "text-lg sm:text-xl font-semibold",
+      "body_lead": "text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-300",
+      "body_regular": "text-sm sm:text-base leading-normal text-slate-600 dark:text-slate-300",
+      "caption": "text-xs font-medium tracking-wide uppercase text-slate-400"
+    }
+  },
+  "layout_modes": {
+    "marketing_landing": {
+      "max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "header_style": "sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-sm",
+      "hero_style": "py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-purple-50/50 via-white to-slate-50/50",
+      "package_grid": "grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch",
+      "coverage_promo_bento": "grid grid-cols-1 lg:grid-cols-12 gap-8 items-center",
+      "footer_style": "bg-slate-900 text-slate-300 py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-800"
+    },
+    "map_experience": {
+      "viewport": "fixed inset-0 z-50 flex flex-col bg-slate-900",
+      "header_bar": "h-16 px-4 flex items-center justify-between bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm z-30",
+      "center_crosshair_ux": "pointer-events-none absolute inset-0 z-20 flex items-center justify-center",
+      "floating_action_bar": "absolute bottom-6 inset-x-0 z-30 flex justify-center px-4",
+      "control_tools_overlay": "absolute top-20 right-4 z-30 flex flex-col gap-2"
+    },
+    "admin_dashboard": {
+      "sidebar_width": "w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 flex flex-col",
+      "main_viewport": "flex-1 overflow-y-auto bg-slate-50 dark:bg-slate-900 min-h-screen",
+      "table_card": "bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xs overflow-hidden"
+    }
+  },
+  "interactive_components": {
+    "lead_capture_modal": {
+      "title": "Cek Jangkauan Fiber di Lokasi Anda",
+      "fields": ["Nama Lengkap (mandatory)", "Nomor WhatsApp (mandatory, auto +62 format)", "Alamat / Patokan Singkat (opsional)"],
+      "action_label": "Lanjutkan ke Peta Jangkauan"
+    },
+    "floating_action_button_machine": {
+      "states": {
+        "LOCATING": {
+          "label": "Tentukan Lokasi Saya",
+          "icon": "Crosshair",
+          "action": "centerMapToGps"
+        },
+        "CHECKING": {
+          "label": "Cek Coverage di Titik Ini",
+          "icon": "ShieldCheck",
+          "action": "evaluatePointInPolygons"
+        },
+        "CONTACT_WHATSAPP": {
+          "label": "Hubungi Kami via WhatsApp",
+          "icon": "MessageCircle",
+          "action": "openWhatsAppWithCoordinatesAndPackage"
+        }
+      }
+    },
+    "result_modals": {
+      "covered": {
+        "title": "Selamat! Lokasi Anda Tercover",
+        "tone": "emerald",
+        "content": "Jaringan Fiber Optic kecepatan tinggi tersedia di titik Anda. Tim teknisi siap melakukan survei & instalasi 1x24 jam.",
+        "primary_cta": "Pilih Paket & Hubungi Sales",
+        "secondary_cta": "Cek Titik Lain"
+      },
+      "not_covered": {
+        "title": "Mohon Maaf, Lokasi Anda Belum Tercover",
+        "tone": "rose",
+        "content": "Titik lokasi Anda saat ini berjarak di luar zona aktif kami. Kami telah mencatat data Anda untuk prioritas ekspansi rute fiber terdekat.",
+        "primary_cta": "Daftar Antrean Ekspansi (WhatsApp)",
+        "secondary_cta": "Pindahkan Pin Map"
+      }
+    }
+  },
+  "image_urls": {
+    "hero_network_lifestyle": "https://images.unsplash.com/photo-1640622302099-f10b18de7b16?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGZhbWlseSUyMHVzaW5nJTIwbGFwdG9wJTIwaW50ZXJuZXQlMjBob21lfGVufDB8fHx8MTc4OTE0MzI5NXww&ixlib=rb-4.1.0&q=85",
+    "hardware_router": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwxfHx3aWZpJTIwcm91dGVyJTIwaGlnaCUyMHNwZWVkJTIwZmliZXIlMjBpbnRlcm5ldHxlbnwwfHx8fDE3ODkxNDMyOTR8MA&ixlib=rb-4.1.0&q=85",
+    "fiber_tower_infrastructure": "https://images.unsplash.com/photo-1708481295267-4b1859f4ffc2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxpbmRvbmVzaWElMjB0ZWxlY29tbXVuaWNhdGlvbiUyMHRvd2VyJTIwZmliZXIlMjBvcHRpY3xlbnwwfHx8fDE3ODkxNDMyOTV8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "testing_contract": {
+    "mandatory_data_testids": [
+      "landing-header-brand",
+      "landing-nav-cta-coverage",
+      "landing-hero-cta-check",
+      "package-card-select-button",
+      "coverage-section-cta-button",
+      "lead-form-name-input",
+      "lead-form-phone-input",
+      "lead-form-submit-button",
+      "map-container",
+      "map-center-pin",
+      "map-gps-button",
+      "map-floating-action-button",
+      "modal-covered-container",
+      "modal-covered-whatsapp-button",
+      "modal-uncovered-container",
+      "modal-uncovered-whatsapp-button",
+      "admin-sidebar-nav-dashboard",
+      "admin-sidebar-nav-coverage",
+      "admin-sidebar-nav-packages",
+      "admin-sidebar-nav-leads",
+      "admin-sidebar-nav-branding",
+      "admin-branding-color-picker",
+      "admin-branding-save-button",
+      "admin-gis-upload-button"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Language is strictly Indonesian (Bahasa Indonesia) for all customer-facing and tenant admin UI text.",
+    "Implement the tenant branding color customizer dynamically using document.documentElement.style.setProperty('--tenant-primary', hex) or CSS custom property bindings so tenants can configure their primary purple/brand tone.",
+    "Use Leaflet with react-leaflet or vanilla leaflet script with OpenStreetMap tiles. Provide reliable fallback coordinates centered on Jakarta/Bandung/Surabaya with pre-seeded GeoJSON polygons so the coverage checker works out-of-the-box.",
+    "The Customer Flow must be seamless: Clicking CTA opens customer lead dialog (Nama + WA mandatory) -> Navigates/renders the interactive full-screen map -> Mobile fixed center pin UX with Floating Action Button state machine -> Instant ray-casting point-in-polygon test against active GeoJSON -> Displays result modal -> WhatsApp direct link generator pre-filled with customer details, package, coordinates and coverage status.",
+    "The Admin Dashboard must have responsive layout with sidebar for: Dashboard (overview metrics), Coverage (GIS upload/preview/toggle active table), Packages (CRUD internet tiers with IDR pricing), Leads (search, filter by status, pagination, export/WhatsApp action), Branding (tenant title, logo upload/preview, primary color picker), and Account/Tenants placeholders.",
+    "All interactive elements MUST have the prescribed data-testid tags."
+  ]
+}
